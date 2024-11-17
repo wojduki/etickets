@@ -1,0 +1,16 @@
+server:
+  port: 8060
+
+spring:
+  application:
+    name: api-gateway
+  cloud:
+    gateway:
+      mvc:
+        routes:
+          - id: ticket-service
+            uri: lb://ticket-service
+            predicates:
+              - Path=/ticket-service/**
+
+
