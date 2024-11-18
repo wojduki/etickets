@@ -6,7 +6,6 @@ spring:
     name: api-gateway
   cloud:
     gateway:
-      mvc:
         routes:
           - id: ticket-service
             uri: lb://ticket-service
