@@ -1,4 +1,4 @@
-package com.wojduki.ticket_service;
+package com.wojduki.ticket_service.model;
 
 import java.time.LocalDate;
 

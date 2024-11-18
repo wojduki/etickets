@@ -1,6 +1,10 @@
-package com.wojduki.ticket_service;
+package com.wojduki.ticket_service.controller;
 
+import com.wojduki.ticket_service.model.Ticket;
+import com.wojduki.ticket_service.service.TicketsService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -13,20 +17,18 @@ import java.util.List;
 public class TicketController {
     @Value("${eureka.instance.instance-id}")
     private String id;
+    @Autowired
+    TicketsService ticketsService;
 
     @GetMapping("/hello")
     public String get() {
         return "hello world! My id: " + id ;
     }
 
-    @GetMapping("/get-tickets")
-    public List<Ticket> getTickets() {
-        List<Ticket> ticketList;
-        ticketList = List.of(
-                new Ticket("Kings of Leon", LocalDate.now(), 260, "image url","purchase url"),
-                new Ticket("Norah Jones", LocalDate.now(), 350, "image url","purchase url"),
-                new Ticket("Coldplay", LocalDate.now(), 400, "image url","purchase url"));
-
-        return ticketList;
+    @GetMapping("/tickets")
+    public String getTickets(Model model) {
+        List<Ticket> ticketsList = ticketsService.getTicketList();
+        model.addAttribute("tickets", ticketsList);
+        return "tickets";
     }
 }
