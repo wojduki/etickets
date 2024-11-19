@@ -9,12 +9,15 @@ public class Ticket {
     private String imageUrl;
     private String purchaseUrl;
 
-    public Ticket(String event, LocalDate date, float price, String imageUrl, String purchaseUrl) {
+    private int count;
+
+    public Ticket(String event, LocalDate date, float price, String imageUrl, String purchaseUrl, int count) {
         this.event = event;
         this.date = date;
         this.price = price;
         this.imageUrl = imageUrl;
         this.purchaseUrl = purchaseUrl;
+        this.count = count;
     }
 
     public String getEvent() {
@@ -55,5 +58,13 @@ public class Ticket {
 
     public void setPurchaseUrl(String purchaseUrl) {
         this.purchaseUrl = purchaseUrl;
+    }
+
+    public int getCount() {
+        return count;
+    }
+
+    public void setCount(int count) {
+        this.count = count;
     }
 }

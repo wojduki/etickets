@@ -19,6 +19,7 @@
             <td>Wydarzenie</td>
             <td>Data</td>
             <td>Cena</td>
+            <td>Dostępna ilość</td>
             <td>Obrazek</td>
             <td>Zakup</td>
             <td></td>
@@ -29,8 +30,10 @@
             <td th:text="${ticket.event}"></td>
             <td th:text="${ticket.date}"></td>
             <td th:text="${ticket.price}"></td>
+            <td th:text="${ticket.count}"></td>
             <td th:text="${ticket.imageUrl}"></td>
             <td th:text="${ticket.purchaseUrl}"></td>
+<!--            <td><a th:href="${'/material/edit?id='+material.id}">Kup</a></td>-->
         </tr>
         </tbody>
     </table>
