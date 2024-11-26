@@ -3,7 +3,6 @@ package com.wojduki.ticket_service.service;
 import com.wojduki.ticket_service.model.Ticket;
 import jakarta.annotation.PostConstruct;
 import org.springframework.stereotype.Service;
-
 import java.time.LocalDate;
 import java.util.List;
 
