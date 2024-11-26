@@ -16,6 +16,6 @@ public class PaymentController {
         JsonNode root = objectMapper.readTree(paymentInfo);
         String email = root.path("data").path("object").path("customer_details").path("email").asText();
         System.out.println("email: "+ email);
-        return "hello world";
+        return email;
     }
 }
