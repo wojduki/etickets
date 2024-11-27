@@ -17,6 +17,7 @@ public class EmailController {
     @GetMapping("/send-email")
     public void send(@RequestParam String email) throws MessagingException {
         mailService.sendEmail(email);
+        System.out.println("wysłano email");
     }
 
 
