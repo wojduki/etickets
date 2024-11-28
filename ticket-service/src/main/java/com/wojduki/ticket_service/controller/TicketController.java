@@ -14,15 +14,9 @@ import java.util.List;
 @Controller
 @RequestMapping("/ticket-service")
 public class TicketController {
-//    @Value("${eureka.instance.instance-id}")
-//    private String id;
+
     @Autowired
     TicketsService ticketsService;
-
-//    @GetMapping("/hello")
-//    public String get() {
-//        return "hello world! My id: " + id ;
-//    }
 
     @GetMapping("/tickets")
     public String getTickets(Model model) {

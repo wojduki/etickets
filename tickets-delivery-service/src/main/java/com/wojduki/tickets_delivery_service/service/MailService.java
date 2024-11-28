@@ -20,5 +20,7 @@ public class MailService {
         helper.setTo(email);
         helper.setSubject("Twoje bilety od etickets");
         helper.setText("Twoje bilety są dostępne pod linkiem: ");
+        javaMailSender.send(message);
+        System.out.println("wysłano maila na: "+email);
     }
 }
