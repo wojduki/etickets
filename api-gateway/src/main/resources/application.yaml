@@ -15,5 +15,9 @@ spring:
             uri: lb://payment-validation-service
             predicates:
               - Path=/payment-validation-service/**
+          - id: tickets-delivery-service
+            uri: lb://tickets-delivery-service
+            predicates:
+              - Path=/tickets-delivery-service/**
 
 

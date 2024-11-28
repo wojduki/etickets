@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.*;
 @Controller
 @RequestMapping("/payment-validation-service")
 public class PaymentController {
+
     @PostMapping("/webhook")
         public String webhook(@RequestBody String paymentInfo) throws JsonProcessingException {
 
