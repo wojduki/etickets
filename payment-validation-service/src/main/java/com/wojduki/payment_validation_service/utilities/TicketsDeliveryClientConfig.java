@@ -11,7 +11,7 @@ public class TicketsDeliveryClientConfig {
     @Bean
     public TicketsDeliveryClient createticketsDeliveryClient() {
         RestClient restClient = RestClient.builder()
-                .baseUrl("http://tickets-delivery-service")
+                .baseUrl("http://TICKETS-DELIVERY-SERVICE")
                 .build();
         RestClientAdapter adapter = RestClientAdapter.create(restClient);
         HttpServiceProxyFactory factory = HttpServiceProxyFactory.builderFor(adapter).build();

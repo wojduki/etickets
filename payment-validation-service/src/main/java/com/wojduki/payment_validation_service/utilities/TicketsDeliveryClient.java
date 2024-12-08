@@ -7,6 +7,6 @@ import org.springframework.web.service.annotation.HttpExchange;
 @HttpExchange
 public interface TicketsDeliveryClient {
 
-    @GetExchange("/send-email")
+    @GetExchange("/tickets-delivery-service/send-email")
     void send(@RequestParam String email);
 }
