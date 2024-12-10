@@ -1,0 +1,2 @@
+Aplikacja obsługująca sprzedaż biletów online, oparta na mikroserwisach. Pozwala na tworzenie dodatkowych instancji aplikacji np. Ticket service, Payment validation service w zależności od obciążenia serwisu.
+Service registry i API Gateway służą do zarządzania pozostałymi usługami. Do obsługi płatności wykorzystano serwis Stripe w wersji testowej. Projekt jest stworzony dla celów edukacyjnych i będzie kontynuowany.
